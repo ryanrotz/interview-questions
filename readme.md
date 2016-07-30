@@ -9,25 +9,62 @@ Go through all of the following questions and think about how you would respond 
 ## General Questions
 
 * What did you learn yesterday/this week?
+
 * What excites or interests you about coding?
+
+** I love the 'hands on' aspect of coding, that I get to build something. I love architecture and the idea of creating and building something that people use and will make their lives better.
+
 * What is a recent technical challenge you experienced and how did you solve it?
+
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+
 * Talk about your preferred development environment.
+
 * Which version control systems are you familiar with?
+** I use Git for version control. Version control records the changes you make to documents over time so you can revisit them later.
+
 * Can you describe your workflow when you create a web page?
+** 
 * If you have 5 different stylesheets, how would you best integrate them into the site?
+** compress them into one rather than using @import, which loads sequentially and causes slow page loading.
 * Can you describe the difference between progressive enhancement and graceful degradation?
+** Graceful degredation starts with the most recent technology
+
 * Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
+** Loop through images in an array, use setTimeout.
+
 * If you could master one technology this year, what would it be?
+
 * Explain the importance of standards and standards bodies.
+** WC3 is standards bodies
+** Standards are important because if they make it easier for other people to follow your code and everyone to be on the same page.
 
 ## HTML Questions
 
 * What does a `doctype` do?
+** It tells the browser to render in the Standards Mode/compliant way, rather than Quirks Mode. It came about because of the "broken" rendering of old IE browsers.
+http://stackoverflow.com/questions/1818587/what-is-the-functionality-of-doctype 
+
 * What's the difference between HTML and XHTML?
+** XHTML uses stricter syntax (XML) than HTML. Must have closing tags on all elements, be lowercased,   
+
 * What are `data-` attributes good for?
+** Data attributes are something that came about with HTML 5. It's a way we can store snippets of data. The data should not be displayed to users, it's a way to identify certain elements. 
+They can also be stored to contain information that is constantly changing, like scores in a game.
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes
+http://webdesign.tutsplus.com/tutorials/all-you-need-to-know-about-the-html5-data-attribute--webdesign-9642
+
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
+** "session cookies live as long as browser WINDOW is open (not tab in which they were set) BUT sessionStorage is nulled as soon as you close the tab" 
+** localStorage stores data until it's removed with Javascript or the user clears their cache.
+** sessionStorage stores the data until the tab is closed or the session ends. It doesn't delete when the page reloads though. Session data is more secure than local Storage or cookies. Cookies can be read by other people over wifi. 
+** Cookies can store less data.
+http://stackoverflow.com/questions/29960037/localstorage-vs-sessionstorage-vs-cookies
+http://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies/19869560#19869560
+
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+
+COMMIT NOW
 
 ## CSS Questions
 
@@ -72,6 +109,8 @@ Go through all of the following questions and think about how you would respond 
   * If so, what libraries have you used?
 * Explain "hoisting".
 * Describe event bubbling.
+** Event bubbling happens when there are nested items and you make a change to one of the items and the change is applied to all the events above it (the parents). It propagates up the DOM tree. A great example of this: https://codepen.io/fightingtheboss/pen/BNajOr 
+
 * What's the difference between an "attribute" and a "property"?
 * Why is extending built-in JavaScript objects not a good idea?
 * What is the difference between `==` and `===`?
