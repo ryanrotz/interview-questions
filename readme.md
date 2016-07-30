@@ -63,6 +63,8 @@ http://stackoverflow.com/questions/29960037/localstorage-vs-sessionstorage-vs-co
 http://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies/19869560#19869560
 
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+** CSS needs to be loaded first. Having the script tags at the bottom allows the page (document) to load first. This provides a better user experience because otherwise the page will stop to load the scripts. THe other option, which is newer and IMO better, is to put the scripts in the head, under the css links and to put 'async' or 'defer' in the script tag. These allow the page to load while also fetching the script at the same time. With async, the script is loaded as soon as it's downloaded. Whichever script finishes first, will start first. If you need scripts to run in order, you use defer. Additionally, defer scripts start once the page fully loads. Async and defer may not run properly in IE <= 9 though.
+
 
 COMMIT NOW
 
