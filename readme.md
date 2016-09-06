@@ -14,30 +14,46 @@ Go through all of the following questions and think about how you would respond 
 
 ** I love the 'hands on' aspect of coding, that I get to build something. I love architecture and the idea of creating and building something that people use and will make their lives better.
 
-* What is a recent technical challenge you experienced and how did you solve it?
+* What is a recent technical challenge you experienced and how did you solve it (demonstrate your resourcefulness and self-sufficiency)?
+** Coding challenge: tried different approaches, tested in Terminal
+** Issues with Ionic. Google it, stack overflow, forums, ask a fellow developer. 
 
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+** Naming conventions -- do the function names make sense?
+** Are there clear comments to help future devs who work on the code?
+** Has the auth been tested for holes? Has the code been tested at all?
+** What's the user story (UI)?
+** How many clicks does it take for the user to accomplish their goal?
+** What is the runtime and runspace? How many resources/memory and time does it take to process?
 
 * Talk about your preferred development environment.
+** Apple, Sublime, have terminal windows open to catch errors, Chrome developer tools
 
-* Which version control systems are you familiar with?
-** I use Git for version control. Version control records the changes you make to documents over time so you can revisit them later.
+* Which version control systems are you familiar with? (READ UP ON GIT VS SVN)
+** I use Git for version control. Version control records the changes you make to documents over time so you can revisit them later. (TALK ABOUT HOW YOU'VE USED IT) I've used it in group projects, hackathons, and individually. I try to make commits every day.
+
 
 * Can you describe your workflow when you create a web page?
-** 
+** Create a plan, figure out which technologies to use, set up a git repo, open up sublime, create basic html, set up routes and database if necessary, work on the core functionality, then styling, and testing.
+
+
 * If you have 5 different stylesheets, how would you best integrate them into the site?
-** compress them into one rather than using @import, which loads sequentially and causes slow page loading.
+** If all the stylesheets are needed on all the pages, compress them into one rather than using @import, which loads sequentially and causes slow page loading. Or just include the stylesheet on the view that's needed.
+
 * Can you describe the difference between progressive enhancement and graceful degradation?
+** How your app works on newer/older browsers. What's the baseline? Different approaches.
 ** Graceful degredation starts with the most recent technology
 
 * Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
 ** Loop through images in an array, use setTimeout.
 
 * If you could master one technology this year, what would it be?
+** React / React Native
 
 * Explain the importance of standards and standards bodies.
 ** WC3 is standards bodies
 ** Standards are important because if they make it easier for other people to follow your code and everyone to be on the same page.
+** A set of guidelines that everyone can adhere to
 
 ## HTML Questions
 
@@ -46,7 +62,7 @@ Go through all of the following questions and think about how you would respond 
 http://stackoverflow.com/questions/1818587/what-is-the-functionality-of-doctype 
 
 * What's the difference between HTML and XHTML?
-** XHTML uses stricter syntax (XML) than HTML. Must have closing tags on all elements, be lowercased,   
+** XHTML uses stricter syntax (XML) than HTML. Must have closing tags on all elements, be lowercased, etc.  
 
 * What are `data-` attributes good for?
 ** Data attributes are something that came about with HTML 5. It's a way we can store snippets of data. The data should not be displayed to users, it's a way to identify certain elements. 
@@ -59,22 +75,31 @@ http://webdesign.tutsplus.com/tutorials/all-you-need-to-know-about-the-html5-dat
 ** localStorage stores data until it's removed with Javascript or the user clears their cache.
 ** sessionStorage stores the data until the tab is closed or the session ends. It doesn't delete when the page reloads though. Session data is more secure than local Storage or cookies. Cookies can be read by other people over wifi. 
 ** Cookies can store less data.
+** Cookies are often used for login data (sent to the server?)
 http://stackoverflow.com/questions/29960037/localstorage-vs-sessionstorage-vs-cookies
 http://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies/19869560#19869560
 
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
-** CSS needs to be loaded first. Having the script tags at the bottom allows the page (document) to load first. This provides a better user experience because otherwise the page will stop to load the scripts. THe other option, which is newer and IMO better, is to put the scripts in the head, under the css links and to put 'async' or 'defer' in the script tag. These allow the page to load while also fetching the script at the same time. With async, the script is loaded as soon as it's downloaded. Whichever script finishes first, will start first. If you need scripts to run in order, you use defer. Additionally, defer scripts start once the page fully loads. Async and defer may not run properly in IE <= 9 though.
-
-
-COMMIT NOW
+** CSS needs to be loaded first. Having the script tags at the bottom allows the page (document) to load first. This provides a better user experience because otherwise the page will stop to load the scripts. The other option, which is newer and IMO better, is to put the scripts in the head, under the css links and to put 'async' or 'defer' in the script tag. These allow the page to load while also fetching the script at the same time. With async, the script is loaded as soon as it's downloaded. Whichever script finishes first, will start first. If you need scripts to run in order, you use defer. Additionally, defer scripts start once the page fully loads. Async and defer may not run properly in IE <= 9 though. Don't use async and defer when using Angular though. 
 
 ## CSS Questions
 
 * What is the difference between classes and IDs in CSS?
+** IDs are used once. Classes are used multiple times.
+
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+** resetting removes all of the default styling from the browser. Normalize is a base stylesheet, which styles the default elements to be consistent across browsers. 
+
 * Describe Floats and how they work.
+** Take an element out of the normal flow of the page. Sticks it to the left/right and wraps the other elements (like text) around it.
+
 * Describe z-index and how stacking context is formed.
+** The order of elements. Bigger numbers cover smaller numbers.
+WHAT IS STACKING CONTEXT?
+
 * Have you ever used a grid system, and if so, what do you prefer?
+** Bootstrap/Materialize has 12 columns (that's a grid system)
+
 * Have you used or implemented media queries or mobile specific layouts/CSS?
 * How do you optimize your webpages for print?
 * What are the advantages/disadvantages of using CSS preprocessors?
@@ -95,18 +120,40 @@ COMMIT NOW
 ## JS Questions
 
 * Explain event delegation
+** Event delegation allows you to target a parent element, instead of adding an event listener to many individual objects.
+
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+** 
+
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
   * How would you go about checking for any of these states?
+
 * What is a closure, and how/why would you use one?
+
 * What's a typical use case for anonymous functions?
+** AJAX. Or if you only need to execute a block of code once and you don't need to call it again (self-invoking)
+** (function() {
+  console.log('called');
+})();
+
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+** defining a function 
+** callinga function and setting it's return fuction to a variable
+** creatinga new object and assigning it to a variable
+
+
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
 * What's the difference between feature detection, feature inference, and using the User Agent string?
 * Explain AJAX in as much detail as possible.
+** asynchronous javascipt call. 
+** we use it for http requests, api requests
+** get or send info without reloading the page
+** you can set up an event listener, on a form for example, to send the data without reloading the page.
+** AJAX request to a server (yours or somewhere else). You have to get something back, whether its data or an error.
+
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
 * Explain "hoisting".
@@ -144,15 +191,21 @@ COMMIT NOW
 * What do controllers do in rails?
 * What is RESTful routing?
 * What is a polymorphic association?
+** something that belongs to more than one database model (2:1)???
+
 * What are params?
 * How do I make a migration to add a column in Rails?
 * What is CSRF? How does Rails protect an app against this?
+** CSRF is when someone tries to... hack you're site? Mess with your page...? Rails prevents access to certain protocols. 
 * What's the difference between `User.find_by_id(1)` and `User.find(1)`?
 * What's are classes in Ruby? What are modules? And what's the difference?
 
 ## Testing Questions
 
 * What are some advantages/disadvantages to testing your code?
+** Catch bugs
+** It takes more time
+
 * What tools would you use to test your code's functionality?
 * What is the difference between a unit test and a functional/integration test?
 * What is the purpose of a code style linting tool?
