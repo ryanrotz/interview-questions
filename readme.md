@@ -101,10 +101,22 @@ WHAT IS STACKING CONTEXT?
 ** Bootstrap/Materialize has 12 columns (that's a grid system)
 
 * Have you used or implemented media queries or mobile specific layouts/CSS?
+** Yes, I've used @media queries for responsive design.
+
 * How do you optimize your webpages for print?
+**
+
 * What are the advantages/disadvantages of using CSS preprocessors?
   * Describe what you like and dislike about the CSS preprocessors you have used.
+  ** Adds more functionality, which also adds more complexity. Can confuse team members who are familiar with CSS but not preprocessors. May not be ideal if lots of different people will be editing CSS.
+  ** SASS, LESS, and Stylus are popular preprocessors. 
+  ** Variables, nesting, mixins, extend, color operations, if/else, loops, math, import other scss files.
+
 * How would you implement a web design comp that uses non-standard fonts?
+** If a computer doesn't have the font locally, the browser selects an alternative fontd.
+** Universal fonts: Arial, Times New Roman, Courier New, Georgia, Verdana
+** Use Google web fonts and link to them in the HTML header.
+
 * Explain how a browser determines what elements match a CSS selector.
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
