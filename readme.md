@@ -121,10 +121,19 @@ WHAT IS STACKING CONTEXT?
  * TypeKit
 
 * Explain how a browser determines what elements match a CSS selector.
- ** Browsers read from right to left
+ * Browsers read from right to left, which is faster than left to right. There are likely less options for the browser to look through.
+ * It's recommended to not use more than 2 selectors for a rule, because it takes the browser too much time.
 
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+ * All HTML elements can be considered boxes. In the box is content, padding, border, margin, in that order. 
+ * When setting width and height, that only applies to the content section of the box. If you add padding, border, or margin, the box's width will be larger. You must keep this in mind when designing a page with a specific page width. All the images need to fit!
+
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
+ * Normally (as mentioned above), height and width only contain the content. with border-box, the height and width also include padding and border, but not margin. 
+ * This is like IE's old 'quirks mode'.
+ * It's very effective for responsive design!
+ * https://css-tricks.com/box-sizing/
+
 * List as many values for the display property that you can remember.
 * What's the difference between inline and inline-block?
 * What's the difference between a relative, fixed, absolute and statically positioned element?
