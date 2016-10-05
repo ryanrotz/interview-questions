@@ -108,17 +108,17 @@ WHAT IS STACKING CONTEXT?
 
 * What are the advantages/disadvantages of using CSS preprocessors?
   * Describe what you like and dislike about the CSS preprocessors you have used.
-  ** Adds more functionality, which also adds more complexity. Can confuse team members who are familiar with CSS but not preprocessors. May not be ideal if lots of different people will be editing CSS.
-  ** SASS, LESS, and Stylus are popular preprocessors. 
+   * Adds more functionality, which also adds more complexity. Can confuse team members who are familiar with CSS but not preprocessors. May not be ideal if lots of different people will be editing CSS.
+   ** SASS, LESS, and Stylus are popular preprocessors. 
   ** Variables, nesting, mixins, extend, color operations, if/else, loops, math, import other scss files.
 
 * How would you implement a web design comp that uses non-standard fonts?
- ** If a computer doesn't have the font locally, the browser selects an alternative fontd.
- ** Universal fonts: Arial, Times New Roman, Courier New, Georgia, Verdanad
- ** Use Google web fonts and link to them in the HTML header.
- ** @font-face
- ** Font.com
- ** TypeKit
+ * If a computer doesn't have the font locally, the browser selects an alternative fontd.
+ * Universal fonts: Arial, Times New Roman, Courier New, Georgia, Verdanad
+ * Use Google web fonts and link to them in the HTML header.
+ * @font-face
+ * Font.com
+ * TypeKit
 
 * Explain how a browser determines what elements match a CSS selector.
  ** Browsers read from right to left
