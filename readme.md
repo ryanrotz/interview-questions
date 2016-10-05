@@ -113,11 +113,16 @@ WHAT IS STACKING CONTEXT?
   ** Variables, nesting, mixins, extend, color operations, if/else, loops, math, import other scss files.
 
 * How would you implement a web design comp that uses non-standard fonts?
-** If a computer doesn't have the font locally, the browser selects an alternative fontd.
-** Universal fonts: Arial, Times New Roman, Courier New, Georgia, Verdana
-** Use Google web fonts and link to them in the HTML header.
+ ** If a computer doesn't have the font locally, the browser selects an alternative fontd.
+ ** Universal fonts: Arial, Times New Roman, Courier New, Georgia, Verdanad
+ ** Use Google web fonts and link to them in the HTML header.
+ ** @font-face
+ ** Font.com
+ ** TypeKit
 
 * Explain how a browser determines what elements match a CSS selector.
+ ** Browsers read from right to left
+
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
 * List as many values for the display property that you can remember.
