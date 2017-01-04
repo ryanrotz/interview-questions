@@ -174,7 +174,8 @@ WHAT IS STACKING CONTEXT?
 ## JS Questions
 
 * Explain event delegation
-** Event delegation allows you to target a parent element, instead of adding an event listener to many individual objects.
+ * Event delegation allows you to target a parent element, instead of adding an event listener to many individual objects. For example, you can add a click event listener to a <ul> element instead of each individual <li> element.
+ * Reference: https://davidwalsh.name/event-delegate
 
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
