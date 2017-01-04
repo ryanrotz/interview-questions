@@ -194,6 +194,41 @@ person.showFullName();  // John Doe
  ```
 
 * Explain how prototypal inheritance works
+ * Reference: https://medium.com/@kevincennis/prototypal-inheritance-781bccc97edb#.uuv7bc2rr
+ * All functions have a property called 'prototype'. This is an object.
+ * Constructor functions are capitalized
+ * Example:
+ ```javascript
+function Dog() {
+}
+
+Dog.prototype.bark = function() {
+  return 'woof!';
+};
+
+var fido = new Dog();
+
+fido.bark();
+
+// The JS engine looks for a property called 'bark' on the fido object but it doesn't find one so it goes up the "prototype chain" to fido's parent, which is Dog.prototype. It finds Dog.prototype.bark and it calls it, with `this` bound to fido.
+ ```
+
+ ```javascript
+function Rectangle(height, width) {
+  this.height = height;
+  this.width = width;
+}
+
+Rectangle.prototype.area = function(height, width) {
+  return height * width;
+}
+
+var newRect = new Rectangle();
+
+newRect.area(5, 20);
+ ```
+
+
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 ** 
 
