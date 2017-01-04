@@ -178,6 +178,21 @@ WHAT IS STACKING CONTEXT?
  * Reference: https://davidwalsh.name/event-delegate
 
 * Explain how `this` works in JavaScript
+ * `this` is like a pronoun. "John is going to the store. He is running there fast." "He is the pronoun" and "John" is the antecedent. `this` refers to the object and also contains the value of the object.
+ * Reference: http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/
+ * Example:
+ ```javascript
+var person = {
+  firstName: "John",
+  lastName: "Doe",
+  showFullName: function() {
+  console.log(this.firstName + "" this.lastName);
+  }
+}
+
+person.showFullName();  // John Doe
+ ```
+
 * Explain how prototypal inheritance works
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 ** 
